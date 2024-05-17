@@ -1,13 +1,29 @@
+@import "variables";
+
 * {
     padding: 0;
     margin: 0;
 }
 
+a{
+    text-decoration: none
+}
+
+li{
+    list-style: none;
+}
+
 nav {
     .container_enlaces {
-        padding: 0 23px;
+        height: 40px;
+        padding: $padding;
+        background-color: $primary_color;
+
+        display: flex;
 
         .enlaces {
+            width: 100%;
+
             display: flex;
             justify-content: space-between;
 
@@ -37,19 +53,23 @@ nav {
     }
 
     .container_navBar {
-        padding: 0 23px;
+        height: 60px;
+        padding: $padding;
+        background-color: $secondary_color;
+
+        display: flex;
 
         .navBar {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            height: auto;
 
             .navBar_logo {
                 a {
                     img {
                         height: 1.8rem;
+                        width: 60px;
                     }
                 }
             }
@@ -60,11 +80,70 @@ nav {
                     justify-content: center;
                     align-items: center;
 
-                    list-style-type: none;
-
-                
+                    li {
+                        margin: 0 4px 0 4px ;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+
+.main_wrapper{
+    padding: $padding;
+    text-align: center;
+    background-color: $secondary_color;
+
+    .enunciado{
+        h1,p{
+            margin: 8px 0 8px 0;
+        }
+    }
+
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+
+        .card{
+            p{
+                padding: 8px;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $terceary_color;
+
+    .mas_opciones{
+        display: flex;
+        padding: 50px 23px 50px 23px;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            a, p, button{
+                padding: 8px 0 8px 0;
+            }
+        }
+    }
+    
+    .legales{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid white;
+
+        padding: 20px 23px 20px 23px;
+        
+        a, p{
+            display: inline;
+            padding: 0 4px 0 4px;
         }
     }
 }

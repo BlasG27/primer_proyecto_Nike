@@ -2,9 +2,19 @@
   padding: 0;
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
 nav .container_enlaces {
-  padding: 0 23px; }
+  height: 40px;
+  padding: 0 23px;
+  background-color: #f5f5f5;
+  display: flex; }
   nav .container_enlaces .enlaces {
+    width: 100%;
     display: flex;
     justify-content: space-between; }
     nav .container_enlaces .enlaces .enlace_logo img {
@@ -21,16 +31,56 @@ nav .container_enlaces {
         margin: 0 .8rem; }
 
 nav .container_navBar {
-  padding: 0 23px; }
+  height: 60px;
+  padding: 0 23px;
+  background-color: #fff;
+  display: flex; }
   nav .container_navBar .navBar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: auto; }
+    align-items: center; }
     nav .container_navBar .navBar .navBar_logo a img {
-      height: 1.8rem; }
+      height: 1.8rem;
+      width: 60px; }
     nav .container_navBar .navBar .navBar_nav ul {
       display: flex;
       justify-content: center;
-      align-items: center;
-      list-style-type: none; }
+      align-items: center; }
+      nav .container_navBar .navBar .navBar_nav ul li {
+        margin: 0 4px 0 4px; }
+        nav .container_navBar .navBar .navBar_nav ul li a {
+          font-size: 16px; }
+
+.main_wrapper {
+  padding: 0 23px;
+  text-align: center;
+  background-color: #fff; }
+  .main_wrapper .enunciado h1, .main_wrapper .enunciado p {
+    margin: 8px 0 8px 0; }
+  .main_wrapper .cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: start; }
+    .main_wrapper .cards .card p {
+      padding: 8px; }
+
+footer {
+  background-color: #111; }
+  footer .mas_opciones {
+    display: flex;
+    padding: 50px 23px 50px 23px; }
+    footer .mas_opciones div {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      footer .mas_opciones div a, footer .mas_opciones div p, footer .mas_opciones div button {
+        padding: 8px 0 8px 0; }
+  footer .legales {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    padding: 20px 23px 20px 23px; }
+    footer .legales a, footer .legales p {
+      display: inline;
+      padding: 0 4px 0 4px; }
