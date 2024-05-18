@@ -1,3 +1,23 @@
+/*-------------------------------------------------*/
+/*Fonts*/
+.rem-titulos {
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  padding: 8px 0 8px 0;
+  font-size: 45px; }
+
+.rem-texto, * {
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 8px 0 8px;
+  color: #000; }
+
+/*-------------------------------------------------*/
+/*Reset y Parametros base*/
 * {
   padding: 0;
   margin: 0; }
@@ -8,9 +28,17 @@ a {
 li {
   list-style: none; }
 
+/*-------------------------------------------------*/
+/*Clases para establer parametros*/
+.container_padding {
+  padding: 0 23px 0 23px; }
+
+img {
+  width: 100%; }
+
+/*-------------------------------------------------*/
 nav .container_enlaces {
   height: 40px;
-  padding: 0 23px;
   background-color: #f5f5f5;
   display: flex; }
   nav .container_enlaces .enlaces {
@@ -32,7 +60,6 @@ nav .container_enlaces {
 
 nav .container_navBar {
   height: 60px;
-  padding: 0 23px;
   background-color: #fff;
   display: flex; }
   nav .container_navBar .navBar {
@@ -53,10 +80,12 @@ nav .container_navBar {
           font-size: 16px; }
 
 .main_wrapper {
-  padding: 0 23px;
   text-align: center;
   background-color: #fff; }
-  .main_wrapper .enunciado h1, .main_wrapper .enunciado p {
+  .main_wrapper .carrucel {
+    height: 60px;
+    background-color: #f5f5f5; }
+  .main_wrapper .enunciado p {
     margin: 8px 0 8px 0; }
   .main_wrapper .cards {
     display: flex;
@@ -67,6 +96,11 @@ nav .container_navBar {
 
 footer {
   background-color: #111; }
+  footer h5 {
+    color: #fff; }
+  footer a,
+  footer p {
+    color: #7e7e7e; }
   footer .mas_opciones {
     display: flex;
     padding: 50px 23px 50px 23px; }
@@ -74,13 +108,17 @@ footer {
       display: flex;
       flex-direction: column;
       width: 100%; }
-      footer .mas_opciones div a, footer .mas_opciones div p, footer .mas_opciones div button {
+      footer .mas_opciones div a,
+      footer .mas_opciones div button {
         padding: 8px 0 8px 0; }
   footer .legales {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid white;
     padding: 20px 23px 20px 23px; }
-    footer .legales a, footer .legales p {
+    footer .legales .ubicacion a {
+      color: #fff; }
+    footer .legales a,
+    footer .legales p {
       display: inline;
-      padding: 0 4px 0 4px; }
+      padding: 0 8px 0 8px; }

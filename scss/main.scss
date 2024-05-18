@@ -1,22 +1,8 @@
 @import "variables";
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-a{
-    text-decoration: none
-}
-
-li{
-    list-style: none;
-}
-
 nav {
     .container_enlaces {
         height: 40px;
-        padding: $padding;
         background-color: $primary_color;
 
         display: flex;
@@ -54,7 +40,6 @@ nav {
 
     .container_navBar {
         height: 60px;
-        padding: $padding;
         background-color: $secondary_color;
 
         display: flex;
@@ -81,7 +66,8 @@ nav {
                     align-items: center;
 
                     li {
-                        margin: 0 4px 0 4px ;
+                        margin: 0 4px 0 4px;
+
                         a {
                             font-size: 16px;
                         }
@@ -92,58 +78,80 @@ nav {
     }
 }
 
-.main_wrapper{
-    padding: $padding;
+.main_wrapper {
     text-align: center;
     background-color: $secondary_color;
 
-    .enunciado{
-        h1,p{
+    .carrucel {
+        height: 60px;
+        background-color: $primary_color;
+    }
+
+    .enunciado {
+
+        p {
             margin: 8px 0 8px 0;
         }
     }
 
-    .cards{
+    .cards {
         display: flex;
         justify-content: space-between;
         text-align: start;
 
-        .card{
-            p{
+        .card {
+            p {
                 padding: 8px;
             }
         }
     }
 }
 
-footer{
+footer {
     background-color: $terceary_color;
 
-    .mas_opciones{
+    h5 {
+        color: $font_secondary_color;
+    }
+
+    a,
+    p {
+        color: $font_terceary_color;
+    }
+
+    .mas_opciones {
         display: flex;
         padding: 50px 23px 50px 23px;
 
-        div{
+        div {
             display: flex;
             flex-direction: column;
             width: 100%;
 
-            a, p, button{
+            a,
+            button {
                 padding: 8px 0 8px 0;
             }
         }
     }
-    
-    .legales{
+
+    .legales {
         display: flex;
         justify-content: space-between;
         border-top: 1px solid white;
 
+        .ubicacion {
+            a {
+                color: $font_secondary_color;
+            }
+        }
+
         padding: 20px 23px 20px 23px;
-        
-        a, p{
+
+        a,
+        p {
             display: inline;
-            padding: 0 4px 0 4px;
+            padding: 0 8px 0 8px;
         }
     }
 }
