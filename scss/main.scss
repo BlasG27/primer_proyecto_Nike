@@ -60,6 +60,11 @@ nav {
             }
 
             .navBar_nav {
+
+                @media(max-width:1000px) {
+                    display: none;
+                }
+
                 ul {
                     display: flex;
                     justify-content: center;
@@ -95,11 +100,24 @@ nav {
     }
 
     .cards {
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
         text-align: start;
 
+        @media(max-width:650px) {
+            flex-direction: column;
+        }
+
         .card {
+            width: 100%;
+            max-width: 550px;
+
+            padding: 20px 0;
+
             p {
                 padding: 8px;
             }
@@ -122,6 +140,11 @@ footer {
     .mas_opciones {
         display: flex;
         padding: 50px 23px 50px 23px;
+        gap: 10px;
+
+        @media(max-width:650px) {
+            flex-direction: column;
+        }
 
         div {
             display: flex;
@@ -133,17 +156,54 @@ footer {
                 padding: 8px 0 8px 0;
             }
         }
+
+        .redes__sociales {
+            width: 30%;
+            display: flex;
+            gap: 10px;
+
+            @media(max-width:650px) {
+                flex-direction: row;
+            }
+
+            a {
+                width: 50%;
+                min-width: 50px;
+            }
+        }
     }
 
     .legales {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         border-top: 1px solid white;
+        gap: 1px;
+        flex-wrap: wrap;
+
+        @media(max-width:650px) {
+            flex-direction: column;
+        }
 
         .ubicacion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             a {
                 color: $font_secondary_color;
             }
+
+            @media(max-width:650px) {
+                flex-direction: column;
+            }
+        }
+
+        .legales__items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
 
         padding: 20px 23px 20px 23px;

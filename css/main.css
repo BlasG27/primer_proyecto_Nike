@@ -70,6 +70,9 @@ nav .container_navBar {
     nav .container_navBar .navBar .navBar_logo a img {
       height: 1.8rem;
       width: 60px; }
+    @media (max-width: 1000px) {
+      nav .container_navBar .navBar .navBar_nav {
+        display: none; } }
     nav .container_navBar .navBar .navBar_nav ul {
       display: flex;
       justify-content: center;
@@ -88,11 +91,21 @@ nav .container_navBar {
   .main_wrapper .enunciado p {
     margin: 8px 0 8px 0; }
   .main_wrapper .cards {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
     text-align: start; }
-    .main_wrapper .cards .card p {
-      padding: 8px; }
+    @media (max-width: 650px) {
+      .main_wrapper .cards {
+        flex-direction: column; } }
+    .main_wrapper .cards .card {
+      width: 100%;
+      max-width: 550px;
+      padding: 20px 0; }
+      .main_wrapper .cards .card p {
+        padding: 8px; }
 
 footer {
   background-color: #111; }
@@ -103,7 +116,11 @@ footer {
     color: #7e7e7e; }
   footer .mas_opciones {
     display: flex;
-    padding: 50px 23px 50px 23px; }
+    padding: 50px 23px 50px 23px;
+    gap: 10px; }
+    @media (max-width: 650px) {
+      footer .mas_opciones {
+        flex-direction: column; } }
     footer .mas_opciones div {
       display: flex;
       flex-direction: column;
@@ -111,13 +128,41 @@ footer {
       footer .mas_opciones div a,
       footer .mas_opciones div button {
         padding: 8px 0 8px 0; }
+    footer .mas_opciones .redes__sociales {
+      width: 30%;
+      display: flex;
+      gap: 10px; }
+      @media (max-width: 650px) {
+        footer .mas_opciones .redes__sociales {
+          flex-direction: row; } }
+      footer .mas_opciones .redes__sociales a {
+        width: 50%;
+        min-width: 50px; }
   footer .legales {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-top: 1px solid white;
+    gap: 1px;
+    flex-wrap: wrap;
     padding: 20px 23px 20px 23px; }
-    footer .legales .ubicacion a {
-      color: #fff; }
+    @media (max-width: 650px) {
+      footer .legales {
+        flex-direction: column; } }
+    footer .legales .ubicacion {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      footer .legales .ubicacion a {
+        color: #fff; }
+      @media (max-width: 650px) {
+        footer .legales .ubicacion {
+          flex-direction: column; } }
+    footer .legales .legales__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
     footer .legales a,
     footer .legales p {
       display: inline;
