@@ -32,6 +32,7 @@ $font_terceary_color: #7e7e7e;
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 
     @extend .rem-texto;
 }
