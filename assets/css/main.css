@@ -26,6 +26,9 @@
 a {
   text-decoration: none; }
 
+.enlace--sub-rayado {
+  text-decoration: underline; }
+
 li {
   list-style: none; }
 
@@ -86,9 +89,12 @@ nav .container_navBar {
 .main_wrapper {
   text-align: center;
   background-color: #fff; }
-  .main_wrapper .carrucel {
-    height: 60px;
-    background-color: #f5f5f5; }
+  .main_wrapper .slider {
+    padding: 1.5rem 0;
+    position: relative; }
+    .main_wrapper .slider .slider__container {
+      position: absolute;
+      top: 0; }
   .main_wrapper .enunciado p {
     margin: 8px 0 8px 0; }
   .main_wrapper .cards {
