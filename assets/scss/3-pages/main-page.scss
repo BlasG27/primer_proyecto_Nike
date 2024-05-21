@@ -86,14 +86,31 @@ nav {
     background-color: $secondary_color;
 
     .slider{
-        padding: 1.5rem 0;
-        position: relative;
+        height: 60px;
+        width: 300px;
+        margin: auto;
+        overflow: hidden;
 
-        .slider__container{
-            position: absolute;
-            top: 0;
-            
+        .slider__contain{
+            display: flex;
+            animation: slide ease 40s infinite;
+            animation-delay: 1s;
+            width: 1200px;
+            div{
+                width: 300px;
+            }
         }
+
+        @keyframes slide {
+            5%{ transform: translateX(-300px);}
+            10%{ transform: translateX(-600px);}
+            15%{ transform: translateX(-900px);}
+        }
+
+    }
+
+    .cuotas{
+        margin-top: 1000px;
     }
 
     .enunciado {
@@ -203,7 +220,7 @@ footer {
             }
         }
 
-        .legales__items{
+        .legales__items {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;

@@ -90,11 +90,27 @@ nav .container_navBar {
   text-align: center;
   background-color: #fff; }
   .main_wrapper .slider {
-    padding: 1.5rem 0;
-    position: relative; }
-    .main_wrapper .slider .slider__container {
-      position: absolute;
-      top: 0; }
+    height: 60px;
+    width: 300px;
+    margin: auto;
+    overflow: hidden; }
+    .main_wrapper .slider .slider__contain {
+      display: flex;
+      animation: slide ease 40s infinite;
+      animation-delay: 1s;
+      width: 1200px; }
+      .main_wrapper .slider .slider__contain div {
+        width: 300px; }
+
+@keyframes slide {
+  5% {
+    transform: translateX(-300px); }
+  10% {
+    transform: translateX(-600px); }
+  15% {
+    transform: translateX(-900px); } }
+  .main_wrapper .cuotas {
+    margin-top: 1000px; }
   .main_wrapper .enunciado p {
     margin: 8px 0 8px 0; }
   .main_wrapper .cards {
