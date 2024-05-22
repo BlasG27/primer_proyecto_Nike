@@ -86,31 +86,83 @@ nav {
     background-color: $secondary_color;
 
     .slider{
-        height: 60px;
-        width: 300px;
+        height: 70px;
+        background-color: $primary_color;
+
+    .slider__container{ // utilizo varias mediaqueries para ajustar el diseno del slide a mobile ya que ".slider__container" al ser flex no me permite modificar los width de los slide sin que se rompan.
+        width: 400px;
         margin: auto;
         overflow: hidden;
 
+        @media (max-width:445px){
+            width: 300px;
+        }
+
         .slider__contain{
             display: flex;
-            animation: slide ease 40s infinite;
-            animation-delay: 1s;
-            width: 1200px;
+            justify-content: center;
+            align-items: center;
+            animation: slide ease 30s infinite; //animacion para desktop.
+            animation-delay: 4s;
+            width: 1600px;
+            height: 70px;
+
+            @media (max-width:445px){
+                animation-name: slideMobile; //animacion para mobile.
+                width: 1200px;
+            }
             div{
-                width: 300px;
+                width: 400px;
+                @media (max-width:445px){
+                    width: 300px;
+                }
             }
         }
 
-        @keyframes slide {
-            5%{ transform: translateX(-300px);}
-            10%{ transform: translateX(-600px);}
-            15%{ transform: translateX(-900px);}
+        @keyframes slide { //animacion para desktop:32s - 1s = 3.33%, utilizo 1s para el desplazamiento y 4s para que el usuario observe el slide.
+            3%{ transform: translateX(-400px);}
+            13%{transform: translateX(-400px);}
+
+            16%{ transform: translateX(-800px);}
+            31%{ transform: translateX(-800px);}
+
+            34%{ transform: translateX(-1200px);}
+            47%{ transform: translateX(-1200px);}
+
+            51%{ transform: translateX(-800px);}
+            64%{ transform: translateX(-800px);}
+
+            67%{ transform: translateX(-400px);}
+            80%{ transform: translateX(-400px);}
+
+            83%{ transform: translateX(0);}
+            95%{ transform: translateX(0);}
         }
 
+        @keyframes slideMobile { //animacion version mobile.
+            3%{ transform: translateX(-300px);}
+            13%{transform: translateX(-300px);}
+
+            16%{ transform: translateX(-600px);}
+            31%{ transform: translateX(-600px);}
+
+            34%{ transform: translateX(-900px);}
+            47%{ transform: translateX(-900px);}
+
+            51%{ transform: translateX(-600px);}
+            64%{ transform: translateX(-600px);}
+
+            67%{ transform: translateX(-300px);}
+            80%{ transform: translateX(-300px);}
+
+            83%{ transform: translateX(0);}
+            95%{ transform: translateX(0);}
+        }
     }
+}
 
     .cuotas{
-        margin-top: 1000px;
+
     }
 
     .enunciado {
@@ -160,7 +212,7 @@ footer {
 
     .mas_opciones {
         display: flex;
-        padding: 50px 23px 50px 23px;
+        padding: 50px 0 50px 0;
         gap: 10px;
 
         @media(max-width:650px) {
@@ -196,10 +248,8 @@ footer {
 
     .legales {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         border-top: 1px solid white;
-        gap: 1px;
         flex-wrap: wrap;
 
         @media(max-width:650px) {
@@ -208,7 +258,6 @@ footer {
 
         .ubicacion {
             display: flex;
-            justify-content: center;
             align-items: center;
 
             a {
@@ -223,16 +272,9 @@ footer {
         .legales__items {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             align-items: center;
         }
 
-        padding: 20px 23px 20px 23px;
-
-        a,
-        p {
-            display: inline;
-            padding: 0 8px 0 8px;
-        }
+        padding: 20px 0px;
     }
 }
