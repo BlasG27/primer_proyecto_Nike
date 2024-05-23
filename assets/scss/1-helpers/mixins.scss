@@ -1,0 +1,6 @@
+//mixin para hacer mis pages responsive con mediaQuerie
+@mixin mediaQuerie__650px--flex-column{
+    @media(max-width:650px) {
+        flex-direction: column;
+    }
+}

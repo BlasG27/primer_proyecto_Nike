@@ -1,21 +1,25 @@
+//Background colors
 $primary_color: #f5f5f5;
 $secondary_color: #fff;
 $terceary_color: #111;
 
 /*-------------------------------------------------*/
-/*Fonts*/
+/*Font colors*/
 $font_primary_color: #000;
 $font_secondary_color: #fff;
 $font_terceary_color: #7e7e7e;
 
+
+//Font para titulos
 .rem-titulos {
     font-family: "REM", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-size: 45px;
+    font-size: 3rem;
 }
 
+//font para texto normal
 .rem-texto {
     font-family: "REM", sans-serif;
     font-optical-sizing: auto;
@@ -25,34 +29,11 @@ $font_terceary_color: #7e7e7e;
 }
 
 /*-------------------------------------------------*/
-/*Reset y Parametros base*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
-    @extend .rem-texto;
-}
-
-a {
-    text-decoration: none
-}
-
-.enlace--sub-rayado{
-    text-decoration: underline;
-}
-
-li {
-    list-style: none;
-}
-
-/*-------------------------------------------------*/
 /*Clases para establer parametros*/
 .container--padding{
     padding: 0 23px 0 23px;
 }
 
-img{
-    width: 100%;
+.enlace--sub-rayado{
+    text-decoration: underline;
 }
-/*-------------------------------------------------*/

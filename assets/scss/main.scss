@@ -1,3 +1,14 @@
+//Helpers.
 @import"1-helpers/variables.scss";
-@import"2-layout/footer.sass";
-@import"3-pages/main-page.scss";
+@import"1-helpers/resets.scss";
+@import"1-helpers/mixins.scss";
+
+//Layouts para mis pages.
+@import"2-layout/navBar.scss";
+@import"2-layout/footer.scss";
+
+//Componentes para mis pages.
+@import"3-components/slider.scss";
+
+//Pages.
+@import"4-pages/main-page.scss";

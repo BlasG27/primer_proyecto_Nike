@@ -1,0 +1,75 @@
+//Footer para mis pages
+footer {
+    background-color: $terceary_color;
+
+    h5 {
+        color: $font_secondary_color;
+    }
+
+    a,
+    p {
+        color: $font_terceary_color;
+    }
+
+    .mas_opciones {
+        display: flex;
+        padding: 50px 0 50px 0;
+        gap: 10px;
+
+        @include mediaQuerie__650px--flex-column;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            a,
+            button {
+                padding: 8px 0 8px 0;
+            }
+        }
+
+        .redes__sociales {
+            width: 30%;
+            display: flex;
+            gap: 10px;
+
+            @media(max-width:650px) {
+                flex-direction: row;
+            }
+
+            a {
+                width: 50%;
+                min-width: 50px;
+            }
+        }
+    }
+
+    .legales {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid white;
+        flex-wrap: wrap;
+
+        @include mediaQuerie__650px--flex-column;
+
+        .ubicacion {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: $font_secondary_color;
+            }
+
+            @include mediaQuerie__650px--flex-column;
+        }
+
+        .legales__items {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        padding: 20px 0px;
+    }
+}

@@ -1,0 +1,40 @@
+.main-page__wrapper {
+    text-align: center;
+    background-color: $secondary_color;
+
+    .cuotas{
+
+    }
+
+    .enunciado {
+
+        p {
+            margin: 8px 0 8px 0;
+        }
+    }
+
+    .cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        text-align: start;
+
+        @media(max-width:650px) {
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 550px;
+
+            padding: 20px 0;
+
+            p {
+                padding: 8px;
+            }
+        }
+    }
+}

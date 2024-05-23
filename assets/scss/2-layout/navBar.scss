@@ -1,0 +1,92 @@
+//navBar para mis pages.
+nav {
+    .container_enlaces {
+        height: 40px;
+        background-color: $primary_color;
+
+        display: flex;
+
+        .enlaces {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+
+            .enlace_logo {
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .enlaces_usuarios {
+                font-size: .75rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .separacion {
+                    margin: 0 .8rem;
+                }
+            }
+        }
+    }
+
+    .container_navBar {
+        height: 60px;
+        background-color: $secondary_color;
+
+        display: flex;
+
+        .navBar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .navBar_logo {
+                width: 100%;
+                max-width: 270px;
+                a {
+                    img {
+                        width: 60px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .navBar_nav {
+
+                @media(max-width:1000px) {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        margin: 0 4px 0 4px;
+
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .hacermasadelante{
+                width: 100%;
+                max-width: 270px;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
