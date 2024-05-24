@@ -3,18 +3,46 @@
     height: 70px;
     background-color: $primary_color;
 
-.slider__container{ // utilizo varias mediaqueries para ajustar el diseno del slide a mobile ya que ".slider__container" al ser flex no me permite modificar los width de los slide sin que se rompan.
+    .slider__container{
+    display: flex;
+    justify-content: center;
+    
+    .button__slider{
+        border: none;
+        font-size: 2rem;
+    }
+    
+    a:active{
+        background-color: black
+    }
+    
+
+    //clases para ordernar donde se ubican los botones y el contenido del slider
+   .order--one{
+    order: 1;
+   }
+
+   .order--second{
+    order: 2;
+   }
+
+   .order--third{
+    order: 3;
+   }
+
+
+.slider__contain--container{ // utilizo varias mediaqueries para ajustar el diseno del slide a mobile ya que ".slider__container" al ser flex no me permite modificar los width de los slide sin que se rompan.
     width: 400px;
-    margin: auto;
+    display: flex;
     overflow: hidden;
 
     @media (max-width:445px){
         width: 300px;
     }
 
-    .slider__contain{
+    #slider__contain{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         animation: slide ease 30s infinite; //animacion para desktop.
         animation-delay: 4s;
@@ -22,7 +50,7 @@
         height: 70px;
 
         @media (max-width:445px){
-            animation-name: slideMobile; //animacion para mobile.
+            // animation-name: slideMobile; //animacion para mobile.
             width: 1200px;
         }
         div{
@@ -34,43 +62,44 @@
     }
 
     @keyframes slide { //animacion para desktop:32s - 1s = 3.33%, utilizo 1s para el desplazamiento y 4s para que el usuario observe el slide.
-        3%{ transform: translateX(-400px);}
-        13%{transform: translateX(-400px);}
+         3%{ transform: translateX(-25%);}
+        13%{ transform: translateX(-25%);}
 
-        16%{ transform: translateX(-800px);}
-        31%{ transform: translateX(-800px);}
+        16%{ transform: translateX(-50%);}
+        31%{ transform: translateX(-50%);}
 
-        34%{ transform: translateX(-1200px);}
-        47%{ transform: translateX(-1200px);}
+        34%{ transform: translateX(-75%);}
+        47%{ transform: translateX(-75%);}
 
-        51%{ transform: translateX(-800px);}
-        64%{ transform: translateX(-800px);}
+        51%{ transform: translateX(-50%);}
+        64%{ transform: translateX(-50%);}
 
-        67%{ transform: translateX(-400px);}
-        80%{ transform: translateX(-400px);}
-
-        83%{ transform: translateX(0);}
-        95%{ transform: translateX(0);}
-    }
-
-    @keyframes slideMobile { //animacion version mobile.
-        3%{ transform: translateX(-300px);}
-        13%{transform: translateX(-300px);}
-
-        16%{ transform: translateX(-600px);}
-        31%{ transform: translateX(-600px);}
-
-        34%{ transform: translateX(-900px);}
-        47%{ transform: translateX(-900px);}
-
-        51%{ transform: translateX(-600px);}
-        64%{ transform: translateX(-600px);}
-
-        67%{ transform: translateX(-300px);}
-        80%{ transform: translateX(-300px);}
+        67%{ transform: translateX(-25%);}
+        80%{ transform: translateX(-25%);}
 
         83%{ transform: translateX(0);}
         95%{ transform: translateX(0);}
     }
+
+    // @keyframes slideMobile { //animacion version mobile.
+    //     3%{ transform: translateX(-300px);}
+    //     13%{transform: translateX(-300px);}
+
+    //     16%{ transform: translateX(-600px);}
+    //     31%{ transform: translateX(-600px);}
+
+    //     34%{ transform: translateX(-900px);}
+    //     47%{ transform: translateX(-900px);}
+
+    //     51%{ transform: translateX(-600px);}
+    //     64%{ transform: translateX(-600px);}
+
+    //     67%{ transform: translateX(-300px);}
+    //     80%{ transform: translateX(-300px);}
+
+    //     83%{ transform: translateX(0);}
+    //     95%{ transform: translateX(0);}
+    // }
+}
 }
 }
